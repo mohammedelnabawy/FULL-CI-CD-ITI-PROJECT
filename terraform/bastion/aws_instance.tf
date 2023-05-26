@@ -36,7 +36,7 @@ resource "aws_instance" "bastion" {
   vpc_security_group_ids      = [aws_security_group.public-sec.id]
 
   provisioner "local-exec" {
-    command = "echo '${self.public_ip}' > ./inventory"
+    command = "echo '${self.public_ip}' > ./../ansible/inventory"
   }
   user_data = <<-EOF
               #!/bin/bash
