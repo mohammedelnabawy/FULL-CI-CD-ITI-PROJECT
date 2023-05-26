@@ -27,18 +27,3 @@ variable "priv_sub_3_id" {
   description = ""
 
 }
-
-variable "az_1" {
-  type = string
-  description = ""
-}
-
-variable "az_2" {
-  type = string
-  description = ""
-}
-
-variable "az_3" {
-  type = string
-  description = ""
-}
