@@ -4,7 +4,7 @@ variable "vpc_id" {
 
 }
 
-variable "public-sec.id" {
+variable "public-sec-id" {
   type = string
   description = ""
 

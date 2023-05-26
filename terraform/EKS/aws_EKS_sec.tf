@@ -8,7 +8,7 @@ resource "aws_security_group" "EKS-sec-group" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    security_groups = [var.public-sec.id]
+    security_groups = [var.public-sec-id]
   }
 
   egress {
