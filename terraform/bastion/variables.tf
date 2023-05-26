@@ -15,3 +15,7 @@ variable "vpc_id" {
   description = ""
 
 }
+variable "SECRET_ARN" {
+  type = string
+  description = ""
+}
