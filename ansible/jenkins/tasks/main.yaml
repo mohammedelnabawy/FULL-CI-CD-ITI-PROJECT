@@ -1,0 +1,5 @@
+- name: Include k8s
+  include_tasks: k8s.yaml
+
+- name: Include docker
+  include_tasks: docker.yaml

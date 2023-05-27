@@ -1,0 +1,31 @@
+- name: apt-update
+  apt:
+    update_cache: yes
+
+- name: install pre-packeges
+  package:
+    name: '{{item}}'
+    state: present
+  loop: 
+    "{{packeges}}"
+
+- name: Execute the command in remote shell
+  ansible.builtin.shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+- name: Add specified repository into sources list
+  ansible.builtin.apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: install-docker-packeges
+  package:
+    name: '{{item}}'
+    state: present
+  loop: 
+    "{{docker}}"
+
+- name: Add user to group
+  user:
+    name: ubuntu
+    groups: docker
+    append: yes

@@ -1,0 +1,28 @@
+- name: apt-update
+  apt:
+    update_cache: yes
+
+- name: install-python3
+  package:
+    name: python3-pip
+    state: present
+
+- name: Install kubernetes
+  ansible.builtin.pip:
+    name: kubernetes
+
+- name: Copy yaml files 
+  ansible.builtin.copy:
+    src: '{{item}}'
+    dest: '/home/ubuntu'
+  loop:
+    "{{files}}"
+
+- name: Create resources
+  remote_user: ubuntu
+  become: false
+  kubernetes.core.k8s:
+    state: present
+    src: '{{item}}'
+  loop:
+    "{{files}}"
