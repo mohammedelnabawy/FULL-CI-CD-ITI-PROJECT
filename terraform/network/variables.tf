@@ -1,44 +1,44 @@
 variable "vpc_cidr" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "public_subnet_1_cider" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "private_subnet_1_cider" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "private_subnet_2_cider" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "private_subnet_3_cider" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "az_1" {
-  type = string
+  type        = string
   description = ""
 }
 
 variable "az_2" {
-  type = string
+  type        = string
   description = ""
 }
 
 variable "az_3" {
-  type = string
+  type        = string
   description = ""
 }

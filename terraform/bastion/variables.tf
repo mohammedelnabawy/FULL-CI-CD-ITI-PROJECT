@@ -1,21 +1,21 @@
 variable "EC2_TYPE" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "pub_sub_1_id" {
-  type = string
+  type        = string
   description = ""
 
 }
 
 variable "vpc_id" {
-  type = string
+  type        = string
   description = ""
 
 }
 variable "SECRET_ARN" {
-  type = string
+  type        = string
   description = ""
 }

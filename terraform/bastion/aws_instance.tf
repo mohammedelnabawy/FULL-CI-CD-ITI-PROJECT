@@ -7,24 +7,24 @@ data "aws_secretsmanager_secret_version" "secret-version" {
 }
 
 data "aws_ami" "ubuntu" {
-    most_recent = true
-    owners = ["099720109477"]
-    filter {
-        name   = "name"
-        values =  ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20230325"]
-    }
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-    filter {
-        name   = "root-device-type"
-        values = ["ebs"]
-    }
-    filter {
-        name   = "architecture"
-        values = ["x86_64"]
-    }
+  most_recent = true
+  owners      = ["099720109477"]
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-20230325"]
+  }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
 }
 
 resource "aws_instance" "bastion" {

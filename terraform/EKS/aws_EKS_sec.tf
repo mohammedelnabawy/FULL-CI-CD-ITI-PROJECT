@@ -4,10 +4,10 @@ resource "aws_security_group" "EKS-sec-group" {
   vpc_id      = var.vpc_id
 
   ingress {
-    description = "ssh from outside"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    description     = "ssh from outside"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
     security_groups = [var.public-sec-id]
   }
 
