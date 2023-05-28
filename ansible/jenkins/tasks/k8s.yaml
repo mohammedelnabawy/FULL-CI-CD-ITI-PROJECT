@@ -1,3 +1,8 @@
+# - name: eks-update-kubeconfig
+#   remote_user: ubuntu
+#   become: false
+#   ansible.builtin.command: aws eks update-kubeconfig --region us-east-1 --name eks-cluster
+
 - name: apt-update
   apt:
     update_cache: yes
