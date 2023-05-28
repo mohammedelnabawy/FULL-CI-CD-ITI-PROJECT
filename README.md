@@ -24,6 +24,12 @@ containerize code from GitHub and deploy it to the EKS cluster.
     * Build the Dockerfile and push it to dockerhub repository
     * Deploy the app in kubernetes cluster using the image
 
+### simple web app
+* You can find the web app and the dockerfile in the folowing repo:
+```
+https://github.com/mohammedelnabawy/simple-web-app
+```
+
 ### infrastructure using Terraform
 * Run terraform init command to initializes a Terraform working directory.
 ```
