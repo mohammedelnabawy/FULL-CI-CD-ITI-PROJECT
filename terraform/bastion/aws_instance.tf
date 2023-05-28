@@ -47,6 +47,7 @@ resource "aws_instance" "bastion" {
               sudo unzip awscliv2.zip
               sudo ./aws/install
               sudo mkdir /home/ubuntu/.aws/
+              sudo mkdir /home/ubuntu/jenkins/
               sudo touch /home/ubuntu/.aws/credentials
               echo '${tls_private_key.pk.private_key_openssh}' > /home/ubuntu/bastion.pem
               chmod 0400 /home/ubuntu/bastion.pem
