@@ -3,8 +3,7 @@
 Created a private EKS cluster on AWS using Terraform and containerized a simple web app with Docker. Automated
 software installations and implemented Jenkins deployments using Ansible. Created a Jenkins pipeline to
 containerize code from GitHub and deploy it to the EKS cluster.
-![Screenshot from 2023-05-28 14-25-39](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/42da2742-2c06-4ccd-ab34-804a41019768)
-
+![Screenshot from 2023-05-28 14-25-39](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/f0e85e97-1b80-4fb7-8071-e595a630191b)
 ## Tools Used
 * Docker Platform
 * Kubernetes
@@ -74,50 +73,51 @@ kubectl get svc -n jenkins
 ```
 a3b8b4a640d6b452898107eaea34bafc-1771988427.us-east-1.elb.amazonaws.com:8080
 ```
-![Screenshot from 2023-05-28 16-10-49](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/ae63ccf4-4f82-4743-9371-d004b67c57c1)
+![Screenshot from 2023-05-28 16-10-49](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/9974d178-d835-427b-a24d-eaed976fb3ec)
 
 * Run the following command to extract the jenkins password
 ```
 kubectl exec -it pod/<pod name> -n jenkins -- cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 * install the recommended plugins.
-![Screenshot from 2023-05-28 16-15-38](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/946172a7-72a9-4f76-a7db-e93f2281be7b)
+![Screenshot from 2023-05-28 16-15-38](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/447fe438-729c-4b7a-9a99-7971cb7ec197)
 
 * Create first admin user.
-![Screenshot from 2023-05-28 16-16-13](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/b311abcf-c8c3-4470-ae54-a699711e2cca)
+![Screenshot from 2023-05-28 16-16-13](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/21e94869-d637-4bef-8efe-2373e89cf5fe)
 
 * Jenkins URL
-![Screenshot from 2023-05-28 16-16-21](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/b47353cb-b744-4289-b80c-154438bc8bbb)
+![Screenshot from 2023-05-28 16-16-21](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/f891d68c-9428-4f7b-a2db-d46d33ed3904)
 
 * Get started
-![Screenshot from 2023-05-28 16-16-30](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/23cf5cab-c151-454d-9cde-388c077bf981)
+![Screenshot from 2023-05-28 16-16-30](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/f940e8e2-5a99-464b-b5d8-09afe6af41c3)
 
 * Create slave SSH credintial
-![Screenshot from 2023-05-28 16-29-18](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/73ad3ea1-5d98-4d4c-a919-cd41fc61861d)
+![Screenshot from 2023-05-28 16-28-07](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/69766e1a-f290-4661-a1ff-b6a35c1337ee)
 
 * Create Remote Slave
-![Screenshot from 2023-05-28 16-39-37](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/e720b263-2ea9-4e6d-b0d4-c08050bd2c39)
+![Screenshot from 2023-05-28 16-30-45](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/5ebb8209-e3a2-4b46-9308-5afbd27cf384)
+![Screenshot from 2023-05-28 16-39-37](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/8273c00f-81a1-4507-a1a8-b504b602d6b4)
 
 * Create GitHub credintial
-![Screenshot from 2023-05-28 17-06-11](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/7462de2e-f277-4373-8808-57ed2dcbe01d)
+![Screenshot from 2023-05-28 17-06-11](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/4e7f4a80-6f45-49e8-a9d5-4614048e14ca)
 
 * Create Docker credintial
-![Screenshot from 2023-05-28 17-09-29](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/5564b42a-c2c4-45f9-9309-91828b944019)
+![Screenshot from 2023-05-28 17-09-29](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/7b5e4f35-af20-4c24-93b7-6c71aea34e28)
 
 * Create web-app-pipline
-![Screenshot from 2023-05-28 17-11-09](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/8f26f88d-a750-40ec-9457-cfe7fbacaa0d)
+![Screenshot from 2023-05-28 17-11-09](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/aa815374-e558-40bc-9c4a-9f8150032dfd)
 
 * GitHub hook trigger for GITScm polling
-![Screenshot from 2023-05-28 17-12-21](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/918e7f5a-0407-4549-b92d-c3cc5754605f)
+![Screenshot from 2023-05-28 17-12-21](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/32f3e732-be0f-4620-8c42-5ae7d1a5e3a5)
 
 * Add github repo info
-![Screenshot from 2023-05-28 17-12-27](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/93b9e676-cd4b-4c9d-8204-6b1342a92062)
+![Screenshot from 2023-05-28 17-12-27](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/60b16e02-b8e6-4d85-a180-ba097024e24d)
 
 * Add webhook to your simple app repo
-![Screenshot from 2023-05-28 17-36-49](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/91591722-31c1-4cad-8266-d5a7044d2cab)
+![Screenshot from 2023-05-28 17-36-49](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/91b0ed2e-c530-4c32-9c8f-f05a62810c67)
 
 * After every push the pipline will be run
-![Screenshot from 2023-05-28 17-45-03](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/c509ffb6-9cd9-4a02-b9f2-6dfab2744969)
+![Screenshot from 2023-05-28 17-45-03](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/2842870b-84f3-47fc-bc7d-47bacd4e5624)
 
 * Run the following command inside bastion instance to extract public DNS for the web app service  "under external ip header".
 ```
@@ -128,4 +128,4 @@ kubectl get svc -n simple-web
 ```
 afe4b9faa6cb84ebb9bc45dda2643741-847267762.us-east-1.elb.amazonaws.com
 ```
-![Screenshot from 2023-05-28 17-46-36](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/cb3128e2-158c-4ed1-b8f1-f8147ff37098)
+![Screenshot from 2023-05-28 17-46-36](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/97c0a5e9-d250-4616-8216-6c5ca0b3d5d2)
