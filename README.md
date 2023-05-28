@@ -122,3 +122,4 @@ kubectl get svc -n simple-web
 ```
 afe4b9faa6cb84ebb9bc45dda2643741-847267762.us-east-1.elb.amazonaws.com
 ```
+![Screenshot from 2023-05-28 17-46-36](https://github.com/mohammedelnabawy/FULL-CI-CD-ITI-PROJECT/assets/46055709/cb3128e2-158c-4ed1-b8f1-f8147ff37098)
