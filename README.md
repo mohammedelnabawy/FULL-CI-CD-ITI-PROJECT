@@ -14,7 +14,7 @@ containerize code from GitHub and deploy it to the EKS cluster.
 * Amazon Web Service (AWS)
 
 ## Steps
-* Build simple web app
+* create simple web app
 * Create simple web app dockerfile
 * Create infrastructure using Terraform
 * Use ansible to configure bastion Host
@@ -42,4 +42,29 @@ terraform apply
 terraform destroy
 ```
 
+### add configuration using ansible
+* Run ansible playbook to add configuration to bastion host and deploy jenkins deployment.
+```
+ ansible-playbook jenkins.yaml
+```
 
+### Connect to bastion
+* Run this command, if necessary, to ensure your key is not publicly viewable.
+```
+chmod 400 bastion.pem
+```
+* Connect to your instance using its Public IP.
+```
+ssh -i "bastion.pem" ubuntu@<Public IP>
+```
+
+### login to jenkins
+* Run the following command inside bastion instance to extract public DNS for the jenkins service  "under external ip header".
+```
+kubectl get svc -n jenkins
+```
+
+* Hit the URL in any browser after add 8080 port to the URL, it will be like the following URL 
+```
+a3b8b4a640d6b452898107eaea34bafc-1771988427.us-east-1.elb.amazonaws.com:8080
+```
